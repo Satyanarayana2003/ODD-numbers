@@ -8,7 +8,10 @@
  * @returns either true or false
  */
 function isPrime(a){
-    for(i=2; i<=a; i++){
+    //The i*i check is used to avoid iterating over all numbers from 2 to the square root of the given number.
+    // If a number is not divisible by any number less than or equal to its square root,
+    // then it is not divisible by any number greater than its square root.
+    for(i=2; i*i <=a; i++){
      if(a % i != 0){
         //returns true if the number is a prime number
         return true
