@@ -29,6 +29,7 @@ function isPrime(a){
  * @returns oddnumbers list which are one digit difference with consecutive digits
  */
 function ODD(start, end) {
+    let count=0
     const oddNumbers = [];//initial declaration of empty list
     //using for loop to check whether the num is ODD or not
     for (let i = start; i <= end; i++) { 
@@ -44,17 +45,16 @@ function ODD(start, end) {
             break;
             }
         }
-        //if both condition are true push the number to oddnumberss list
+        //if both condition are true print the ODD number
         if (isOddnumber && isPrime(i)) {
-            oddNumbers.push(i);
+            console.log(i)
+            count++
             }
     }
   
-    return oddNumbers;
+    return count;
   }
-  
+ 
 const oddNumbers = ODD(10, 10000000);
 //statement for printing the no of values
-console.log(`There are ${oddNumbers.length} one digit difference prime numbers between 0 and 10 million.`);
-//statement to print oddnumbers list
-console.log(oddNumbers)
+console.log(`There are ${oddNumbers} one digit difference prime numbers between 10 and 10 million.`);
